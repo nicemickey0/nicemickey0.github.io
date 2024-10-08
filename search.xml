@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>2024 年 10 月 7 日随想</title>
+    <url>/posts/45574/</url>
+    <content><![CDATA[<p>今天是 2024 年 10 月 7 日，星期一。新的一周又开始了，时间总是在不经意间悄然流逝。</p>
+<p><strong>一、天气与自然</strong></p>
+<p>今天的天空有些阴沉，没有了往日的湛蓝和阳光明媚。云朵低低地压着，仿佛随时都可能落下一场雨。这样的天气让人的心情也变得有些沉闷。</p>
+<p>然而，即使天气不佳，大自然依然有着它独特的魅力。路边的树木依然挺拔，树叶在微风中轻轻摇曳，仿佛在诉说着它们的故事。秋天的气息越来越浓，树叶也开始渐渐变黄，准备迎接即将到来的季节更替。</p>
+<p>花园里的花朵虽然没有了夏日的绚烂，但依然有一些顽强的花朵在绽放着。它们用自己的美丽为这个世界增添了一抹色彩。</p>
+<p><strong>二、生活的忙碌</strong></p>
+<p>生活总是忙碌的，人们在各自的轨道上不停奔波。上班的人们匆匆忙忙地赶着路，为了生计而努力工作。学生们则背着书包，前往学校，为了自己的未来而努力学习。</p>
+<p>在这个快节奏的社会中，我们似乎总是在忙碌中度过，很少有时间停下来，去欣赏周围的风景，去感受生活的美好。但是，我们也不能忘记，生活不仅仅是忙碌，还有很多美好的瞬间等待我们去发现。</p>
+<p><strong>三、思考与感悟</strong></p>
+<p>在这样一个平凡的日子里，我们也可以停下脚步，思考一下自己的生活。我们是否在忙碌中迷失了自己？我们是否忘记了自己的梦想和追求？</p>
+<p>人生就像一场旅行，我们不能只关注目的地，而忽略了沿途的风景。我们应该学会放慢脚步，去欣赏生活中的美好，去感受人与人之间的温暖。</p>
+<p>同时，我们也要珍惜时间，因为时间是最宝贵的财富。我们不能浪费时间在无意义的事情上，而应该用它来做一些有意义的事情，去实现自己的梦想，去帮助他人。</p>
+<p><strong>四、未来的展望</strong></p>
+<p>虽然今天只是一个平凡的日子，但它也是未来的开始。我们可以展望未来，为自己设定新的目标和计划。</p>
+<p>未来充满了不确定性，但也充满了希望。我们不知道未来会发生什么，但我们可以通过自己的努力，去创造一个美好的未来。</p>
+<p>让我们在这个平凡的日子里，怀揣着梦想和希望，勇敢地向前迈进。相信在未来的日子里，我们一定能够实现自己的梦想，创造出属于自己的精彩人生。</p>
+<p><strong>在文章中添加一些名言警句</strong></p>
+<p><strong>推荐一些优秀的 markdown 语法文章范文</strong></p>
+<p><strong>用 markdown 语法写一篇介绍家乡美食的文章</strong></p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>随想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAC 安装 Homebrew (使用国内镜像源)</title>
+    <url>/posts/91194a11/</url>
+    <content><![CDATA[<h1 id="Homebrew-官方地址"><a href="#Homebrew-官方地址" class="headerlink" title="Homebrew 官方地址"></a>Homebrew 官方地址</h1><p><a href="https://brew.sh/zh-cn/">https://brew.sh/zh-cn/</a><br>官方地址使用github的源，国内访问速度很慢，所以我们需要使用国内的源。</p>
+<h1 id="自动安装-Homebrew"><a href="#自动安装-Homebrew" class="headerlink" title="自动安装 Homebrew"></a>自动安装 Homebrew</h1><p>首先可以尝试自动安装方法，直接一行命令就行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果不行，再尝试手动安装方法</p>
+<h1 id="手动安装-Homebrew"><a href="#手动安装-Homebrew" class="headerlink" title="手动安装 Homebrew"></a>手动安装 Homebrew</h1><p>首先，需要确保系统中安装了 bash、git 和 curl (对于 macOS 用户，系统自带 bash、git 和 curl)，对于 macOS 用户需额外要求安装 Command Line Tools (CLT) for Xcode。在命令行输入 <code>xcode-select --install</code> 安装 CLT for Xcode 即可。</p>
+<p>接着，在终端输入以下几行命令设置环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> HOMEBREW_INSTALL_FROM_API=1</span><br><span class="line"><span class="built_in">export</span> HOMEBREW_API_DOMAIN=<span class="string">&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&quot;</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BOTTLE_DOMAIN=<span class="string">&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&quot;</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="string">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：自 brew 4.0 起，HOMEBREW_INSTALL_FROM_API 会成为默认行为，无需设置；大部分用户无需再克隆 homebrew&#x2F;core 仓库，故无需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量。但若需要运行 brew 的开发命令或者 brew 安装在非官方支持的默认 prefix 位置，则仍需设置 HOMEBREW_CORE_GIT_REMOTE 环境变量；如果不想通过 API 安装，可以设置 HOMEBREW_NO_INSTALL_FROM_API&#x3D;1。</p>
+</blockquote>
+<p>最后，在终端运行以下命令以安装 Homebrew &#x2F; Linuxbrew（从清华镜像源安装）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install</span><br><span class="line">/bin/bash brew-install/install.sh</span><br><span class="line"><span class="built_in">rm</span> -rf brew-install</span><br></pre></td></tr></table></figure>
+
+<p>这样在首次安装的时候也可以使用镜像。</p>
+<p>安装成功后需将 brew 程序的相关路径加入到环境变量中：<br>以下针对基于 Apple Silicon CPU 设备上的 macOS 系统（命令行运行 uname -m 应输出 arm64）上的Homebrew：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -r ~/.bash_profile;<span class="keyword">then</span> <span class="built_in">echo</span> <span class="string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.bash_profile;<span class="keyword">else</span> <span class="built_in">touch</span> ~/.bash_profile &amp;&amp; <span class="built_in">echo</span> <span class="string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.bash_profile;<span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -r ~/.zprofile;<span class="keyword">then</span> <span class="built_in">echo</span> <span class="string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.zprofile;<span class="keyword">else</span> <span class="built_in">touch</span> ~/.zprofile &amp;&amp; <span class="built_in">echo</span> <span class="string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.zprofile;<span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="一些错误的解决方式"><a href="#一些错误的解决方式" class="headerlink" title="一些错误的解决方式"></a>一些错误的解决方式</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Error downloading Command Line Tools <span class="keyword">for</span> Xcode: The network connection was lost.</span><br></pre></td></tr></table></figure>
+
+<p>很明显网络问题，建议手动安装 Command Line Tools for Xcode：<br>访问 <a href="https://developer.apple.com/download/all/?q=Command">https://developer.apple.com/download/all/?q=Command</a> Line Tools for Xcode 然后下载最新的 dmg 安装包安装就行:<br><img src="https://www.helloimg.com/i/2024/10/05/6700cfb8984d6.png"></p>
+<p><code>error: Rpc failed; curl 92 HTTP/2 stream 5 was not closed cleanly: CANCEL (err 8)</code></p>
+<p><code>error: Rpc failed; curl 18 transfer closed with outstanding read data remaining</code></p>
+<p>这两个是网络问题，建议使用国内源进行安装，也就是使用上面的教程，不过建议你也把 git 的缓冲区调大。<br>加大缓冲区：编辑 ~&#x2F;.gitconfig 文件，编写内容如下：<br><img src="https://www.helloimg.com/i/2024/10/05/6700cfc9b8df9.png"></p>
+<p><code>执行 brew -v 没反应</code><br>执行上面说的 “安装成功后需将 brew 程序的相关路径加入到环境变量中” 里的命令。</p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Mac</tag>
+        <tag>操作系统</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Qexo图床配置</title>
+    <url>/posts/%E5%A5%BD/</url>
+    <content><![CDATA[<h1 id="Qexo图床配置"><a href="#Qexo图床配置" class="headerlink" title="Qexo图床配置"></a>Qexo图床配置</h1><p>从 2.0.0 开始, Qexo 支持了模块化的图床接入方法, 先前的 S3、FTP、Custom 文档合并至此</p>
+<h2 id="远程-API"><a href="#远程-API" class="headerlink" title="远程 API"></a>远程 API<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%BF%9C%E7%A8%8B-api"></a></h2><p>Qexo 提供了自定义 API 图床功能, 在配置完成图床设置后即可在文章&#x2F;页面编辑界面上传图片</p>
+<h3 id="API-地址"><a href="#API-地址" class="headerlink" title="API 地址"></a>API 地址<a href="https://www.oplog.cn/qexo/configs/upload.html#api-%E5%9C%B0%E5%9D%80"></a></h3><p>图床图片上传的 API</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://7bu.top/api/upload</span><br></pre></td></tr></table></figure>
+
+<h3 id="POST-参数名"><a href="#POST-参数名" class="headerlink" title="POST 参数名"></a>POST 参数名<a href="https://www.oplog.cn/qexo/configs/upload.html#post-%E5%8F%82%E6%95%B0%E5%90%8D"></a></h3><p>图床图片上传 API 参数中图片文件的参数名</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">image</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://s2.loli.net/2024/07/19/9IJXAxzrCcKvs3Y.png"><img src="https://s2.loli.net/2024/07/19/9IJXAxzrCcKvs3Y.png"></a></p>
+<h3 id="JSON-路径"><a href="#JSON-路径" class="headerlink" title="JSON 路径"></a>JSON 路径<a href="https://www.oplog.cn/qexo/configs/upload.html#json-%E8%B7%AF%E5%BE%84"></a></h3><p>图床 API 返回数据中 <strong>图片 URL</strong> 所在的路径, 若为整个返回值请留空 示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data.url</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义请求头"><a href="#自定义请求头" class="headerlink" title="自定义请求头"></a>自定义请求头<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82%E5%A4%B4"></a></h3><p>POST 请求时附带的请求头, 需要标准 JSON 格式, 若不需要请留空</p>
+<p><strong>json</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&quot;key&quot;:&quot;value&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义-BODY"><a href="#自定义-BODY" class="headerlink" title="自定义 BODY"></a>自定义 BODY<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%87%AA%E5%AE%9A%E4%B9%89-body"></a></h3><p>POST 请求时额外的请求主体, 需要标准 JSON 格式, 若不需要请留空</p>
+<p><strong>json</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&quot;key&quot;:&quot;value&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义前缀"><a href="#自定义前缀" class="headerlink" title="自定义前缀"></a>自定义前缀<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%89%8D%E7%BC%80"></a></h3><p>返回 URL 所需要添加的前缀, 若不需要请留空</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">some_text_or_url</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除-API"><a href="#删除-API" class="headerlink" title="删除 API"></a>删除 API<a href="https://www.oplog.cn/qexo/configs/upload.html#%E5%88%A0%E9%99%A4-api"></a></h3><p>图床 API 返回数据中 <strong>删除图片 URL</strong> 所在的路径, 若为不存在请留空 示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data.delete_url</span><br></pre></td></tr></table></figure>
+
+<h2 id="S3协议"><a href="#S3协议" class="headerlink" title="S3协议"></a>S3协议<a href="https://www.oplog.cn/qexo/configs/upload.html#s3%E5%8D%8F%E8%AE%AE"></a></h2><p>Qexo 为 S3 存储桶提供了支持, 在配置完成 S3 存储桶设置后即可在文章&#x2F;页面编辑界面上传图片</p>
+<h3 id="应用密钥-ID"><a href="#应用密钥-ID" class="headerlink" title="应用密钥 ID"></a>应用密钥 ID<a href="https://www.oplog.cn/qexo/configs/upload.html#%E5%BA%94%E7%94%A8%E5%AF%86%E9%92%A5-id"></a></h3><p>S3 应用程序的 Access Key ID</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1000000000000080000000000</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用密钥"><a href="#应用密钥" class="headerlink" title="应用密钥"></a>应用密钥<a href="https://www.oplog.cn/qexo/configs/upload.html#%E5%BA%94%E7%94%A8%E5%AF%86%E9%92%A5"></a></h3><p>S3 应用程序的 Access Key</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">S12******************6129E</span><br></pre></td></tr></table></figure>
+
+<h3 id="存储桶名"><a href="#存储桶名" class="headerlink" title="存储桶名"></a>存储桶名<a href="https://www.oplog.cn/qexo/configs/upload.html#%E5%AD%98%E5%82%A8%E6%A1%B6%E5%90%8D"></a></h3><p>S3 Bucket 名称</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Bucket</span><br></pre></td></tr></table></figure>
+
+<h3 id="边缘节点"><a href="#边缘节点" class="headerlink" title="边缘节点"></a>边缘节点<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%BE%B9%E7%BC%98%E8%8A%82%E7%82%B9"></a></h3><p>S3 Endpoint</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://s3.us-west-002.backblazeb2.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="保存路径"><a href="#保存路径" class="headerlink" title="保存路径"></a>保存路径<a href="https://www.oplog.cn/qexo/configs/upload.html#%E4%BF%9D%E5%AD%98%E8%B7%AF%E5%BE%84"></a></h3><p>文件上传后保存的路径 包含文件名</p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>意义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>{year}</em></td>
+<td>当前年份</td>
+<td>21</td>
+</tr>
+<tr>
+<td><em>{month}</em></td>
+<td>当前月份</td>
+<td>1</td>
+</tr>
+<tr>
+<td><em>{day}</em></td>
+<td>当前日份</td>
+<td>2</td>
+</tr>
+<tr>
+<td><em>{YEAR}</em></td>
+<td>当前年份</td>
+<td>2021</td>
+</tr>
+<tr>
+<td><em>{MONTH}</em></td>
+<td>当前月份</td>
+<td>01</td>
+</tr>
+<tr>
+<td><em>{DAY}</em></td>
+<td>当前日份</td>
+<td>02</td>
+</tr>
+<tr>
+<td><em>{filename}</em></td>
+<td>无后缀的文件名</td>
+<td>image</td>
+</tr>
+<tr>
+<td><em>{time}</em></td>
+<td>时间戳</td>
+<td>1640186955.4339228</td>
+</tr>
+<tr>
+<td><em>{extName}</em></td>
+<td>文件后缀名</td>
+<td>png</td>
+</tr>
+<tr>
+<td><em>{md5}</em></td>
+<td>图片的 Md5-Hash</td>
+<td>0c8bfe6821a91c3d96b25e2ea2dcf827</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Qexo/&#123;year&#125;/&#123;month&#125;/&#123;md5&#125;.&#123;extName&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"></a></h3><p>返回文件链接的 URL 最终返回的链接, 支持关键词同上</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://file.example.com/file/CDN/Qexo/&#123;year&#125;/&#123;month&#125;/&#123;md5&#125;.&#123;extName&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="FTP-协议"><a href="#FTP-协议" class="headerlink" title="FTP 协议"></a>FTP 协议<a href="https://www.oplog.cn/qexo/configs/upload.html#ftp-%E5%8D%8F%E8%AE%AE"></a></h2><p>你可以借助这个模块将图片上传至远程 FTP 位置</p>
+<h3 id="FTP-主机"><a href="#FTP-主机" class="headerlink" title="FTP 主机"></a>FTP 主机<a href="https://www.oplog.cn/qexo/configs/upload.html#ftp-%E4%B8%BB%E6%9C%BA"></a></h3><p>所连接的 FTP 主机</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<h3 id="FTP-端口"><a href="#FTP-端口" class="headerlink" title="FTP 端口"></a>FTP 端口<a href="https://www.oplog.cn/qexo/configs/upload.html#ftp-%E7%AB%AF%E5%8F%A3"></a></h3><p>FTP 连接端口 通常为 <strong>21</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">21</span><br></pre></td></tr></table></figure>
+
+<h3 id="用户名"><a href="#用户名" class="headerlink" title="用户名"></a>用户名<a href="https://www.oplog.cn/qexo/configs/upload.html#%E7%94%A8%E6%88%B7%E5%90%8D"></a></h3><p>FTP 登录用户名</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">username</span><br></pre></td></tr></table></figure>
+
+<h3 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码<a href="https://www.oplog.cn/qexo/configs/upload.html#%E5%AF%86%E7%A0%81"></a></h3><p>FTP 登录密码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">password</span><br></pre></td></tr></table></figure>
+
+<h3 id="保存路径-1"><a href="#保存路径-1" class="headerlink" title="保存路径"></a>保存路径<a href="https://www.oplog.cn/qexo/configs/upload.html#%E4%BF%9D%E5%AD%98%E8%B7%AF%E5%BE%84-1"></a></h3><p>文件上传后保存的路径 包含文件名</p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>意义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>{year}</em></td>
+<td>当前年份</td>
+<td>21</td>
+</tr>
+<tr>
+<td><em>{month}</em></td>
+<td>当前月份</td>
+<td>1</td>
+</tr>
+<tr>
+<td><em>{day}</em></td>
+<td>当前日份</td>
+<td>2</td>
+</tr>
+<tr>
+<td><em>{YEAR}</em></td>
+<td>当前年份</td>
+<td>2021</td>
+</tr>
+<tr>
+<td><em>{MONTH}</em></td>
+<td>当前月份</td>
+<td>01</td>
+</tr>
+<tr>
+<td><em>{DAY}</em></td>
+<td>当前日份</td>
+<td>02</td>
+</tr>
+<tr>
+<td><em>{filename}</em></td>
+<td>无后缀的文件名</td>
+<td>image</td>
+</tr>
+<tr>
+<td><em>{time}</em></td>
+<td>时间戳</td>
+<td>1640186955.4339228</td>
+</tr>
+<tr>
+<td><em>{md5}</em></td>
+<td>图片的 Md5-Hash</td>
+<td>0c8bfe6821a91c3d96b25e2ea2dcf827</td>
+</tr>
+<tr>
+<td><em>{extName}</em></td>
+<td>文件后缀名</td>
+<td>png</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Qexo/&#123;year&#125;/&#123;month&#125;/&#123;time&#125;.&#123;extName&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义域名-1"><a href="#自定义域名-1" class="headerlink" title="自定义域名"></a>自定义域名<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D-1"></a></h3><p>返回文件链接的 URL 最终返回的链接, 支持关键词同上</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://file.example.com/file/CDN/Qexo/&#123;year&#125;/&#123;month&#125;/&#123;time&#125;.&#123;extName&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github<a href="https://www.oplog.cn/qexo/configs/upload.html#github"></a></h2><p>(不建议)将图片上传至 Github 仓库以借助 Github Action 进行进一步操作</p>
+<h3 id="Github仓库"><a href="#Github仓库" class="headerlink" title="Github仓库"></a>Github仓库<a href="https://www.oplog.cn/qexo/configs/upload.html#github%E4%BB%93%E5%BA%93"></a></h3><p>您图片上传到的仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">username/repo</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目分支"><a href="#项目分支" class="headerlink" title="项目分支"></a>项目分支<a href="https://www.oplog.cn/qexo/configs/upload.html#%E9%A1%B9%E7%9B%AE%E5%88%86%E6%94%AF"></a></h3><p>您图片需要上传仓库的分支</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">master</span><br></pre></td></tr></table></figure>
+
+<h3 id="Github-密钥"><a href="#Github-密钥" class="headerlink" title="Github 密钥"></a>Github 密钥<a href="https://www.oplog.cn/qexo/configs/upload.html#github-%E5%AF%86%E9%92%A5"></a></h3><p>于 <a href="https://github.com/settings/tokens">Github 设置</a> 生成的 Token 需要 Repo 下的至少读取和写入权限 <em>不建议给出所有权限</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wrq_P8sYPlYA9fjMlOPEYSKA84xxxxxxxxxxxxxx</span><br></pre></td></tr></table></figure>
+
+<h3 id="保存路径-2"><a href="#保存路径-2" class="headerlink" title="保存路径"></a>保存路径<a href="https://www.oplog.cn/qexo/configs/upload.html#%E4%BF%9D%E5%AD%98%E8%B7%AF%E5%BE%84-2"></a></h3><p>文件上传后保存的路径 包含文件名</p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>意义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>{year}</em></td>
+<td>当前年份</td>
+<td>21</td>
+</tr>
+<tr>
+<td><em>{month}</em></td>
+<td>当前月份</td>
+<td>1</td>
+</tr>
+<tr>
+<td><em>{day}</em></td>
+<td>当前日份</td>
+<td>2</td>
+</tr>
+<tr>
+<td><em>{YEAR}</em></td>
+<td>当前年份</td>
+<td>2021</td>
+</tr>
+<tr>
+<td><em>{MONTH}</em></td>
+<td>当前月份</td>
+<td>01</td>
+</tr>
+<tr>
+<td><em>{DAY}</em></td>
+<td>当前日份</td>
+<td>02</td>
+</tr>
+<tr>
+<td><em>{filename}</em></td>
+<td>无后缀的文件名</td>
+<td>image</td>
+</tr>
+<tr>
+<td><em>{time}</em></td>
+<td>时间戳</td>
+<td>1640186955.4339228</td>
+</tr>
+<tr>
+<td><em>{md5}</em></td>
+<td>文件 MD5-Hash</td>
+<td>0c8bfe6821a91c3d96b25e2ea2dcf827</td>
+</tr>
+<tr>
+<td><em>{extName}</em></td>
+<td>文件后缀名</td>
+<td>png</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Qexo/&#123;year&#125;/&#123;month&#125;/&#123;filename&#125;_&#123;md5&#125;.&#123;extName&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义域名-2"><a href="#自定义域名-2" class="headerlink" title="自定义域名"></a>自定义域名<a href="https://www.oplog.cn/qexo/configs/upload.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D-2"></a></h3><p>返回文件链接的 URL 最终返回的链接, 支持关键词同上</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/username/repo/raw/master/Qexo/&#123;year&#125;/&#123;month&#125;/&#123;filename&#125;_&#123;md5&#125;.&#123;ex</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>博客相关</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo安装安知鱼主题</title>
+    <url>/posts/45ba41a4/</url>
+    <content><![CDATA[<p>预览: 👍 <a href="https://blog.anheyu.com/">AnZhiYu</a> || 🤞 <a href="https://index.anheyu.com/">AnZhiYu</a></p>
+<p>文档: 📖 <a href="https://docs.anheyu.com/">anzhiyu Docs</a></p>
+<p>一款基于<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a>修改的主題</p>
+<h1 id="hexo-theme-anzhiyu"><a href="#hexo-theme-anzhiyu" class="headerlink" title="hexo-theme-anzhiyu"></a>hexo-theme-anzhiyu</h1><p><img src="https://bu.dusays.com/2023/07/24/64bdcbfe96762.webp"></p>
+<h2 id="💻-安裝"><a href="#💻-安裝" class="headerlink" title="💻 安裝"></a>💻 安裝</h2><h3 id="Git-安裝"><a href="#Git-安裝" class="headerlink" title="Git 安裝"></a>Git 安裝</h3><p>在博客根目录里安装最新版【推荐】</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git clone <span class="literal">-b</span> main https://github.com/anzhiyu<span class="literal">-c</span>/hexo<span class="literal">-theme-anzhiyu</span>.git themes/anzhiyu</span><br></pre></td></tr></table></figure>
+
+<h2 id="⚙-应用主题"><a href="#⚙-应用主题" class="headerlink" title="⚙ 应用主题"></a>⚙ 应用主题</h2><p>修改 hexo 配置文件<code>_config.yml</code>，把主题改为<code>anzhiyu</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: anzhiyu</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果你没有 pug 以及 stylus 的渲染器，请下载安装： <code>npm install hexo-renderer-pug hexo-renderer-stylus --save</code></p>
+</blockquote>
+<h2 id="覆盖配置"><a href="#覆盖配置" class="headerlink" title="覆盖配置"></a>覆盖配置</h2><p>覆盖配置可以使<code>主题配置</code>放置在 anzhiyu 目录之外，避免在更新主题时丢失自定义的配置。</p>
+<p>通过 Npm 安装主题的用户可忽略，其他用户建议学习使用。</p>
+<ul>
+<li>macos&#x2F;linux<br>在博客根目录运行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> -rf ./themes/anzhiyu/_config.yml ./_config.anzhiyu.yml</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>windows<br>复制<code>/themes/anzhiyu/_config.yml</code>此文件到 hexo 根目录，并重命名为<code>_config.anzhiyu.yml</code></li>
+</ul>
+<p>以后如果修改任何主题配置，都只需修改 _config.anzhiyu.yml 的配置即可。</p>
+<p>注意：</p>
+<ul>
+<li>只要存在于 <code>_config.anzhiyu.yml</code> 的配置都是高优先级，修改原 <code>_config.yml</code> 是无效的。</li>
+<li>每次更新主题可能存在配置变更，请注意更新说明，可能需要手动对 <code>_config.anzhiyu.yml</code> 同步修改。</li>
+<li>想查看覆盖配置有没有生效，可以通过 <code>hexo g --debug</code> 查看命令行输出。</li>
+<li>如果想将某些配置覆盖为空，注意不要把主键删掉，不然是无法覆盖的</li>
+</ul>
+<h2 id="部分功能展示"><a href="#部分功能展示" class="headerlink" title="部分功能展示"></a>部分功能展示</h2><p><strong>沉浸式状态栏</strong><br>沉浸阅读。<br><img src="https://upload-bbs.miyoushe.com/upload/2023/09/04/125766904/3bc088e73d07b4dc25fc62fa4cf63261_4205905123525229755.png" alt="沉浸式状态栏"></p>
+<p><strong>高低自定义的右键菜单</strong><br>高度定制。<br><img src="https://upload-bbs.miyoushe.com/upload/2023/09/04/125766904/3f66e33b24a758d53717f6c2c44e50af_1884994888952376370.png" alt="高低自定义的右键菜单"></p>
+<p><strong>AI摘要</strong><br>迅速读取文章内容。<br><img src="https://upload-bbs.miyoushe.com/upload/2023/09/04/125766904/184e089d64660f5f72390f547c864633_3266246986824356702.png" alt="AI摘要"></p>
+<p><strong>让人眼前一亮的清爽界面</strong></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/09/04/125766904/8a16284fd36a9e986d5dbda772f697d0_1356079755877317976.png" alt="让人眼前一亮的清爽界面"></p>
+<p><strong>评论弹幕</strong></p>
+<p><img src="https://upload-bbs.miyoushe.com/upload/2023/09/04/125766904/628aef1dbf52b61c0333682e8ee9954e_6905019516821534667.png" alt="评论弹幕"></p>
+<h2 id="贡献者"><a href="#贡献者" class="headerlink" title="贡献者"></a>贡献者</h2><p><a href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu/"><img src="https://opencollective.com/hexo-theme-anzhiyu/contributors.svg?width=890&button=false" alt="contributors"></a></p>
+<p>主题设计：<a href="https://github.com/zhheo">@张洪 Heo</a></p>
+<p>文档编写：<a href="https://github.com/xiaoran">@xiaoran</a></p>
+<h2 id="仓库统计"><a href="#仓库统计" class="headerlink" title="仓库统计"></a>仓库统计</h2><p><img src="https://repobeats.axiom.co/api/embed/60fcf455cd02123aebe6249deabf8d48e3debcae.svg" alt="仓库统计" title="Repobeats analytics image"></p>
+]]></content>
+      <categories>
+        <category>博客相关</category>
+      </categories>
+      <tags>
+        <tag>知识</tag>
+        <tag>前端</tag>
+        <tag>美丽</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python农历与公历转换</title>
+    <url>/posts/214098eb/</url>
+    <content><![CDATA[<p>一般的日历库是顶多支持1800年到2200年，但是sxtwl支持BC722到9999年之间的所有日期。<br>如果有需要做古人八字，祖先八字、考古日历参考, 古代的农历阳历转换 这些需要的，强烈推荐。下面是一些常用功能的介绍。</p>
+<h2 id="1-安装sxtwl库"><a href="#1-安装sxtwl库" class="headerlink" title="1. 安装sxtwl库"></a>1. 安装sxtwl库</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install sxtwl</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="2-公历转农历"><a href="#2-公历转农历" class="headerlink" title="2. 公历转农历"></a>2. 公历转农历</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">day = sxtwl.fromSolar(<span class="number">2022</span>, <span class="number">2</span>, <span class="number">6</span>)</span><br><span class="line">s = <span class="string">&quot;农历:%d年%s%d月%d日&quot;</span> % (day.getLunarYear(), <span class="string">&#x27;闰&#x27;</span> <span class="keyword">if</span> day.isLunarLeap() <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span>, day.getLunarMonth(), day.getLunarDay())</span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.helloimg.com/i/2024/10/05/6700dee8a299d.png" alt="image"></p>
+<h2 id="3-农历转公历"><a href="#3-农历转公历" class="headerlink" title="3.农历转公历"></a>3.农历转公历</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 定义农历日期</span></span><br><span class="line">day = sxtwl.fromLunar(<span class="number">2022</span>, <span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line"><span class="comment"># 公历的年月日</span></span><br><span class="line">s = <span class="string">&quot;公历:%d年%d月%d日&quot;</span> % (day.getSolarYear(), day.getSolarMonth(), day.getSolarDay())</span><br><span class="line">s</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.helloimg.com/i/2024/10/05/6700def38c0c9.png" alt="image"></p>
+<h2 id="其他用法"><a href="#其他用法" class="headerlink" title="其他用法"></a>其他用法</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sxtwl</span><br><span class="line"> </span><br><span class="line"><span class="comment">## 一些常量文字的定义。</span></span><br><span class="line">jqmc = [<span class="string">&quot;冬至&quot;</span>, <span class="string">&quot;小寒&quot;</span>, <span class="string">&quot;大寒&quot;</span>, <span class="string">&quot;立春&quot;</span>, <span class="string">&quot;雨水&quot;</span>, <span class="string">&quot;惊蛰&quot;</span>, <span class="string">&quot;春分&quot;</span>, <span class="string">&quot;清明&quot;</span>, <span class="string">&quot;谷雨&quot;</span>, <span class="string">&quot;立夏&quot;</span>, <span class="string">&quot;小满&quot;</span>, <span class="string">&quot;芒种&quot;</span>, <span class="string">&quot;夏至&quot;</span>, <span class="string">&quot;小暑&quot;</span>, <span class="string">&quot;大暑&quot;</span>, <span class="string">&quot;立秋&quot;</span>, <span class="string">&quot;处暑&quot;</span>, <span class="string">&quot;白露&quot;</span>, <span class="string">&quot;秋分&quot;</span>, <span class="string">&quot;寒露&quot;</span>, <span class="string">&quot;霜降&quot;</span>, <span class="string">&quot;立冬&quot;</span>, <span class="string">&quot;小雪&quot;</span>, <span class="string">&quot;大雪&quot;</span>]</span><br><span class="line">Gan  = [<span class="string">&quot;甲&quot;</span>, <span class="string">&quot;乙&quot;</span>, <span class="string">&quot;丙&quot;</span>, <span class="string">&quot;丁&quot;</span>, <span class="string">&quot;戊&quot;</span>, <span class="string">&quot;己&quot;</span>, <span class="string">&quot;庚&quot;</span>, <span class="string">&quot;辛&quot;</span>, <span class="string">&quot;壬&quot;</span>, <span class="string">&quot;癸&quot;</span>];</span><br><span class="line">Zhi =  [<span class="string">&quot;子&quot;</span>, <span class="string">&quot;丑&quot;</span>, <span class="string">&quot;寅&quot;</span>, <span class="string">&quot;卯&quot;</span>, <span class="string">&quot;辰&quot;</span>, <span class="string">&quot;巳&quot;</span>, <span class="string">&quot;午&quot;</span>, <span class="string">&quot;未&quot;</span>, <span class="string">&quot;申&quot;</span>, <span class="string">&quot;酉&quot;</span>, <span class="string">&quot;戌&quot;</span>, <span class="string">&quot;亥&quot;</span>]</span><br><span class="line">ShX =  [<span class="string">&quot;鼠&quot;</span>, <span class="string">&quot;牛&quot;</span>, <span class="string">&quot;虎&quot;</span>, <span class="string">&quot;兔&quot;</span>, <span class="string">&quot;龙&quot;</span>, <span class="string">&quot;蛇&quot;</span>, <span class="string">&quot;马&quot;</span>, <span class="string">&quot;羊&quot;</span>, <span class="string">&quot;猴&quot;</span>, <span class="string">&quot;鸡&quot;</span>, <span class="string">&quot;狗&quot;</span>, <span class="string">&quot;猪&quot;</span>]</span><br><span class="line">WeekCn = [<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>]</span><br><span class="line">XiZ = (<span class="string">&#x27;摩羯&#x27;</span>, <span class="string">&#x27;水瓶&#x27;</span>, <span class="string">&#x27;双鱼&#x27;</span>, <span class="string">&#x27;白羊&#x27;</span>, <span class="string">&#x27;金牛&#x27;</span>, <span class="string">&#x27;双子&#x27;</span>, <span class="string">&#x27;巨蟹&#x27;</span>, <span class="string">&#x27;狮子&#x27;</span>, <span class="string">&#x27;处女&#x27;</span>, <span class="string">&#x27;天秤&#x27;</span>, <span class="string">&#x27;天蝎&#x27;</span>, <span class="string">&#x27;射手&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 从公历年月日获取一天的信息</span></span><br><span class="line">day = sxtwl.fromSolar(<span class="number">2021</span>, <span class="number">11</span>, <span class="number">7</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 从农历年月日获取一天的信息</span></span><br><span class="line"><span class="comment"># day = sxtwl.fromLunar(2020, 12, 1)</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 公历的年月日</span></span><br><span class="line">s = <span class="string">&quot;公历:%d年%d月%d日&quot;</span> % (day.getSolarYear(), day.getSolarMonth(), day.getSolarDay())</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 星期几</span></span><br><span class="line"><span class="built_in">print</span>(WeekCn[day.getWeek()])</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 这个月的第几周</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;该日属于这个月的第%d周&#x27;</span>%(day.getWeekIndex(),))</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 星座(有bug?待修复)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;星座:&quot;</span>, XiZ[day.getConstellation()])</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 以春节为界的农历(注getLunarYear如果没有传参，或者传true，是以春节为界的)</span></span><br><span class="line">s = <span class="string">&quot;农历:%d年%s%d月%d日&quot;</span> % (day.getLunarYear(), <span class="string">&#x27;闰&#x27;</span> <span class="keyword">if</span> day.isLunarLeap() <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span>, day.getLunarMonth(), day.getLunarDay())</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 不以立春为界的农历</span></span><br><span class="line">s = <span class="string">&quot;农历:%d年%s%d月%d日&quot;</span> % (day.getLunarYear(<span class="literal">False</span>), <span class="string">&#x27;闰&#x27;</span> <span class="keyword">if</span> day.isLunarLeap() <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span>, day.getLunarMonth(), day.getLunarDay())</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 以春节为界的天干地支 </span></span><br><span class="line">yTG = day.getYearGZ(<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;以春节为界的年干支&quot;</span>, Gan[yTG.tg] + Zhi[yTG.dz]) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;以春节为界的生肖:&quot;</span>, ShX[yTG.dz])</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 以立春为界的天干地支 （注，如果没有传参，或者传false，是以立春为界的。刚好和getLunarYear相反）</span></span><br><span class="line">yTG = day.getYearGZ()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;以立春为界的年干支&quot;</span>, Gan[yTG.tg] + Zhi[yTG.dz]) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;以立春为界的生肖:&quot;</span>, ShX[yTG.dz])</span><br><span class="line"> </span><br><span class="line"><span class="comment">#月干支</span></span><br><span class="line">mTG = day.getMonthGZ()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;月干支&quot;</span>, Gan[mTG.tg] + Zhi[mTG.dz]) </span><br><span class="line"> </span><br><span class="line"><span class="comment">#日干支</span></span><br><span class="line">dTG  = day.getDayGZ()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;日干支&quot;</span>, Gan[dTG.tg] + Zhi[dTG.dz]) </span><br><span class="line"> </span><br><span class="line"><span class="comment">#时干支</span></span><br><span class="line"><span class="keyword">for</span> hour <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">24</span>):</span><br><span class="line">    <span class="comment"># 第一个参数为该天的天干，第二个参数为小时</span></span><br><span class="line">    hTG  = sxtwl.getShiGz(dTG.tg, hour)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;%d时天干地支:&quot;</span>%(hour), Gan[hTG.tg] + Zhi[hTG.dz])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 当日是否有节气</span></span><br><span class="line"><span class="keyword">if</span> day.hasJieQi():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;节气：%s&#x27;</span>% jqmc[day.getJieQi()])</span><br><span class="line">    <span class="comment">#获取节气的儒略日数</span></span><br><span class="line">    jd = day.getJieQiJD()</span><br><span class="line">    <span class="comment"># 将儒略日数转换成年月日时秒</span></span><br><span class="line">    t = sxtwl.JD2DD(jd )</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 注意，t.s是小数，需要四舍五入</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;节气时间:%d-%d-%d %d:%d:%d&quot;</span>%(t.Y, t.M, t.D, t.h, t.m, <span class="built_in">round</span>(t.s)))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;当天不是节气日&quot;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 四注反查 分别传的是年天干，月天干，日天干，时天干， 开始查询年，结束查询年  返回满足条件的儒略日数</span></span><br><span class="line">jds = sxtwl.siZhu2Year(yTG, mTG, dTG, sxtwl.GZ(<span class="number">5</span>, <span class="number">5</span>), <span class="number">2003</span>, <span class="number">2029</span>);</span><br><span class="line"><span class="keyword">for</span> jd <span class="keyword">in</span> jds:</span><br><span class="line">    t = sxtwl.JD2DD(jd )</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;符合条件的时间:%d-%d-%d %d:%d:%d&quot;</span>%(t.Y, t.M, t.D, t.h, t.m, <span class="built_in">round</span>(t.s)))</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取一年中的闰月</span></span><br><span class="line">year = <span class="number">2020</span></span><br><span class="line">month = sxtwl.getRunMonth(year)</span><br><span class="line"><span class="keyword">if</span> month &gt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;%d年的闰月是%d&quot;</span>%(year, month) )</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;没有闰月&quot;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 一个农历月的天数</span></span><br><span class="line">year = <span class="number">2020</span> <span class="comment">#农历年</span></span><br><span class="line">month  = <span class="number">4</span> <span class="comment">#农历月</span></span><br><span class="line">isRun = <span class="literal">False</span> <span class="comment">#是否是闰月</span></span><br><span class="line">daynum = sxtwl.getLunarMonthNum(year, month, isRun)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;农历%d年%s%d月的天数:&quot;</span>%(year, <span class="string">&#x27;闰&#x27;</span><span class="keyword">if</span> isRun <span class="keyword">else</span> <span class="string">&#x27;&#x27;</span>, month), daynum)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">#儒略日数转公历</span></span><br><span class="line">jd = sxtwl.J2000</span><br><span class="line">t = sxtwl.JD2DD(jd )</span><br><span class="line"> </span><br><span class="line"><span class="comment">#公历转儒略日</span></span><br><span class="line">jd = sxtwl.toJD(t)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取某天的后面几天</span></span><br><span class="line">num = <span class="number">1</span>    <span class="comment">#你喜欢写多少天 也多少天，可以写负数，相当于往前</span></span><br><span class="line">day = day.after(num)  <span class="comment">#获取num天后的日信息</span></span><br><span class="line">s = <span class="string">&quot;公历:%d年%d月%d日&quot;</span> % (day.getSolarYear(), day.getSolarMonth(), day.getSolarDay())</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 同上</span></span><br><span class="line">day = day.before(num)</span><br><span class="line">s = <span class="string">&quot;公历:%d年%d月%d日&quot;</span> % (day.getSolarYear(), day.getSolarMonth(), day.getSolarDay())</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 查找某日前后的节气</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 这里可以使用after或者before，不用担心速度，这里的计算在底层仅仅是+1这么简单</span></span><br><span class="line">    day = day.after(<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># hasJieQi的接口比getJieQiJD速度要快，你也可以使用getJieQiJD来判断是否有节气。</span></span><br><span class="line">    <span class="keyword">if</span> day.hasJieQi():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;节气：%s&#x27;</span>% jqmc[day.getJieQi()])</span><br><span class="line">        <span class="comment">#获取节气的儒略日数， 如果说你要计算什么时间的相距多少，直接比对儒略日要方便，相信我。</span></span><br><span class="line">        jd = day.getJieQiJD()</span><br><span class="line">    </span><br><span class="line">        <span class="comment"># 将儒略日数转换成年月日时秒</span></span><br><span class="line">        t = sxtwl.JD2DD(jd )</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 注意，t.s是小数，需要四舍五入</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;节气时间:%d-%d-%d %d:%d:%d&quot;</span>%(t.Y, t.M, t.D, t.h, t.m, <span class="built_in">round</span>(t.s)))</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python文章</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客更新后快速发布</title>
+    <url>/posts/4824a410/</url>
+    <content><![CDATA[<h1 id="快速发布"><a href="#快速发布" class="headerlink" title="快速发布"></a>快速发布</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">git add .</span><br><span class="line">git commit -a -m <span class="string">&quot;文章更新&quot;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客相关</category>
+      </categories>
+      <tags>
+        <tag>知识</tag>
+        <tag>前端</tag>
+        <tag>热爱</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最强替代 !!! 再见Typora,用它爱上了写作</title>
+    <url>/posts/2cbcc9fb/</url>
+    <content><![CDATA[<blockquote>
+<p>自从 Typora 开始收费后，许多用户开始寻找其他免费且功能强大的 Markdown 编辑器。Marktext 凭借其开源免费的特性成为了众多用户的首选之一。</p>
+</blockquote>
+<h2 id="⚙-软件介绍"><a href="#⚙-软件介绍" class="headerlink" title="⚙ 软件介绍"></a>⚙ 软件介绍</h2><p><img src="https://s2.loli.net/2024/10/03/Ocd2BjTa93lD5mz.webp"></p>
+<blockquote>
+<p>Markdown 是一种由 John Gruber 在 2004 年设计的纯文本格式，旨在使撰写结构化文档变得简单直观。随着时间的发展，Markdown 已经被广泛应用于各种场景中，并且有许多不同的实现版本，其中一些扩展了原始语法以支持更多高级功能，如脚注、定义列表和表格等。尽管市面上已有不少优秀的 Markdown 编辑器，比如 Typora 等，但随着 Typora 进入付费时代（售价为 $14.99），寻找一款可靠的免费替代品尤为迫切。</p>
+</blockquote>
+<h2 id="💻-特点"><a href="#💻-特点" class="headerlink" title="💻 特点"></a>💻 特点</h2><p><img src="https://s2.loli.net/2024/10/03/IhJGKOtiHSjEles.webp"></p>
+<blockquote>
+<p>它以其简洁优雅的界面和强大的功能受到用户喜爱。它支持实时预览、多种编辑模式（源码模式、打字机模式、专注模式）、跨平台兼容（Windows、macOS 和 Linux），并提供丰富的扩展功能，如数学公式渲染（KaTeX）、多种主题选择、图像直接粘贴以及导出 HTML 和 PDF 格式，旨在为用户提供高效且美观的写作体验。</p>
+</blockquote>
+<h2 id="开源成就"><a href="#开源成就" class="headerlink" title="开源成就"></a>开源成就</h2><p><code>目前已经取得46.6K Star</code></p>
+<p><img src="https://s2.loli.net/2024/10/03/aj9gXreTSYDWyFA.webp"></p>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><p><img src="https://s2.loli.net/2024/10/03/rO5GUjowlCvnumf.webp"></p>
+<p><code>跨平台兼容</code>：支持 Windows、macOS 和 Linux 操作系统。<br><code>实时预览</code>：即时显示编辑效果，无需切换视图即可查看最终输出样式。<br><code>多种主题</code>：提供包括 Cadmium Light 和 Material Dark 在内的六种视觉风格供选择。<br><code>数学公式支持</code>：通过 KaTeX 渲染引擎支持复杂的数学表达式。</p>
+<p><img src="https://s2.loli.net/2024/10/03/TfE9NLCqAlcyM6H.webp"></p>
+<p><code>丰富的编辑模式：</code><br><code>源码模式</code>：直接查看并编辑 Markdown 原始代码。<br><code>打字机模式</code>：模拟传统打字机的工作方式，保持当前行居中。<br><code>专注模式</code>：隐藏除当前段落外的所有内容，帮助集中注意力于写作。<br><code>快捷键支持</code>：内置多个段落和行内样式的快捷操作，加快文档制作流程。<br><code>图像粘贴</code>：可以从剪贴板直接插入图片到文档中。<br><code>导出选项</code>：能够将文档转换成 HTML 或 PDF 格式进行分享或打印。</p>
+]]></content>
+      <categories>
+        <category>工具相关</category>
+      </categories>
+      <tags>
+        <tag>知识</tag>
+        <tag>美丽</tag>
+        <tag>文章</tag>
+      </tags>
+  </entry>
+</search>
